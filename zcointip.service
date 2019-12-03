@@ -1,0 +1,29 @@
+# cp ./zcointip.service /lib/systemd/system/zcointip.service
+# chmod 644 /lib/systemd/system/zcointip.service
+# Don't forget #!/usr/bin/python
+# chmod +x ./ZCoinTip.py
+# systemctl daemon-reload
+# systemctl enable zcointip.service
+# systemctl start zcointip.service
+# Status:
+# systemctl status zcointip.service
+# To stop:
+# systemctl stop zcointip.service
+# To remove
+# systemctl disable zcointip.service
+
+[Unit]
+Description=ZCoinTipBot
+After=syslog.target
+After=network.target
+After=pandacoind.service
+
+[Service]
+Type=simple
+ExecStart=/zcoin/zcointip-telegram/ZCoinTip.py
+WorkingDirectory=/zcoin/zcointip-telegram/
+Restart=always
+RestartSec=600
+
+[Install]
+WantedBy=multi-user.target

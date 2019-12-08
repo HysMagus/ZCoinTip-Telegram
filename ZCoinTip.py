@@ -310,7 +310,7 @@ def balance(bot, update):
 				else:
 					_balance = int(_rpc_call["result"]["result"])
 					update.message.reply_text(
-						text="%s\n`%i PND`" % (strings.get("user_balance", _lang), _balance),
+						text="%s\n`%i XZC`" % (strings.get("user_balance", _lang), _balance),
 						parse_mode=ParseMode.MARKDOWN,
 						quote=True
 					)
@@ -465,7 +465,7 @@ def rain(bot, update, args):
 			return  # Don't show error. Probably trolling.
 		if _rain_amount_demanded < __rain_min_amount:
 			update.message.reply_text(
-				strings.get("rain_queue_min_amount", _lang) % (__rain_min_amount, "PND", _rain_amount_demanded, "PND"),
+				strings.get("rain_queue_min_amount", _lang) % (__rain_min_amount, "XZC", _rain_amount_demanded, "XZC"),
 				quote=True,
 				parse_mode=ParseMode.MARKDOWN,
 				disable_web_page_preview=True
@@ -565,7 +565,7 @@ def do_tip(bot, update, amounts_float, recipients, handled, verb="tip"):
 				# Now, finally, check if user has enough funds (includes tx fee)
 				if sum(_amounts_float) > _balance - max(1, int(len(recipients)/3)):
 					update.message.reply_text(
-						text="%s `%i PND`" % (strings.get("tip_no_funds", _lang), sum(_amounts_float) + max(1, int(len(recipients)/3))),
+						text="%s `%i XZC`" % (strings.get("tip_no_funds", _lang), sum(_amounts_float) + max(1, int(len(recipients)/3))),
 						quote=True,
 						parse_mode=ParseMode.MARKDOWN
 					)
@@ -641,9 +641,9 @@ def do_tip(bot, update, amounts_float, recipients, handled, verb="tip"):
 							text = "*%s* %s\n%s\n\n[tx %s](%s)%s" % (
 								update.effective_user.name,
 								strings.get("%s_success" % verb, _lang),
-								''.join((("\n- `%3.0f PND ` %s *%s*" % (_tip_dict[_recipient_id], strings.get("%s_preposition" % verb, _lang), handled[_recipient_id][0])) for _recipient_id in _tip_dict)),
+								''.join((("\n- `%3.0f XZC ` %s *%s*" % (_tip_dict[_recipient_id], strings.get("%s_preposition" % verb, _lang), handled[_recipient_id][0])) for _recipient_id in _tip_dict)),
 								_tx[:4] + "..." + _tx[-4:],
-								"https://chainz.cryptoid.info/pnd/tx.dws?" + _tx,
+								"https://chainz.cryptoid.info/xzc/tx.dws?" + _tx,
 								_suppl
 							),
 							quote=True,
@@ -719,7 +719,7 @@ def withdraw(bot, update, args):
 						_balance = int(_rpc_call["result"]["result"])
 						if _balance < _amount + 5:
 							update.message.reply_text(
-								text="%s `%i PND`" % (strings.get("withdraw_no_funds", _lang), _balance-5),
+								text="%s `%i XZC`" % (strings.get("withdraw_no_funds", _lang), _balance-5),
 								quote=True,
 								parse_mode=ParseMode.MARKDOWN
 							)
@@ -738,7 +738,7 @@ def withdraw(bot, update, args):
 									text="%s\n[tx %s](%s)" % (
 										strings.get("withdraw_success", _lang),
 										_tx[:4]+"..."+_tx[-4:],
-										"https://chainz.cryptoid.info/pnd/tx.dws?" + _tx
+										"https://chainz.cryptoid.info/XZC/tx.dws?" + _tx
 									),
 									quote=True,
 									parse_mode=ParseMode.MARKDOWN,
@@ -841,13 +841,13 @@ def scavenge(bot, update):
 									else:
 										_tx = _rpc_call["result"]["result"]
 										update.message.reply_text(
-											text="%s (`%s`).\n%s `%i PND`\n[tx %s](%s)" % (
+											text="%s (`%s`).\n%s `%i XZC`\n[tx %s](%s)" % (
 												strings.get("scavenge_success_1", _lang),
 												_user_id,
 												strings.get("scavenge_success_2", _lang),
 												_balance-5,
 												_tx[:4]+"..."+_tx[-4:],
-												"https://chainz.cryptoid.info/pnd/tx.dws?" + _tx,
+												"https://chainz.cryptoid.info/xzc/tx.dws?" + _tx,
 											),
 											quote=True,
 											parse_mode=ParseMode.MARKDOWN,

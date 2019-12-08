@@ -1,0 +1,29 @@
+# cp ./zerotip.service /lib/systemd/system/zerotip.service
+# chmod 644 /lib/systemd/system/zerotip.service
+# Don't forget #!/usr/bin/python
+# chmod +x ./zerotip.py
+# systemctl daemon-reload
+# systemctl enable zerotip.service
+# systemctl start zerotip.service
+# Status:
+# systemctl status zerotip.service
+# To stop:
+# systemctl stop zerotip.service
+# To remove
+# systemctl disable zerotip.service
+
+[Unit]
+Description=ZeroTipBot
+After=syslog.target
+After=network.target
+After=zerod.service
+
+[Service]
+Type=simple
+ExecStart=/zero/zerotip-telegram/ZeroTip.py
+WorkingDirectory=/zero/zerotip-telegram/
+Restart=always
+RestartSec=600
+
+[Install]
+WantedBy=multi-user.target

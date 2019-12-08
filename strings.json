@@ -1,20 +1,20 @@
 {
 	"welcome": {
 		"en": [
-			":panda_face: Hi! This is a tipbot for Pandacoin.",
-			"You can use it to share pandas with your friends."
+			":panda_face: Hi! This is a tipbot for ZCoin.",
+			"You can use it to share ZCoin with your friends."
 		]
 	},
 	"help": {
 		"en": [
-			"This bot allows you to receive, store and send pandacoins on Telegram.",
+			"This bot allows you to receive, store and send Zcoins on Telegram.",
 			"",
-			":moneybag: To get started, create a deposit address or ask a friend to send you some pandas.",
+			":moneybag: To get started, create a deposit address or ask a friend to send you some Zcoins.",
 			"Use /deposit or /address _in private_ to know your own address on the bot.",
-			"Then you can send funds to that address the same way as you usually transfer funds with your PandaBank.",
-			"Use /balance _in private_ to know how much Pandacoin you have got in your account.",
+			"Then you can send funds to that address the same way as you usually transfer funds with your ZBank.",
+			"Use /balance _in private_ to know how much Zcoin you have got in your account.",
 			"",
-			":person_tipping_hand: Once you have some pandas, share them with your friends.",
+			":person_tipping_hand: Once you have some ZCoin, share them with your friends.",
 			"Use `/tip <user> <amount>`",
 			"Make sure to correctly tag your the person you are tipping.",
 			"",
@@ -23,7 +23,7 @@
 			"Important: `amount` will be sent to each member, and it will NOT be shared among them.",
 			"Make sure to rain more than the minimum amount, and on enough members.",
 			"",
-			":globe_with_meridians: Need to withdraw to your PandaBank?",
+			":globe_with_meridians: Need to withdraw to your Zbank?",
 			"Use `/withdraw <address> <amount>`",
 			"Please double check your address before submitting, as we cannot undo that process.",
 			"",
@@ -59,7 +59,7 @@
 	},
 	"about": {
 		"en": [
-			"This is a tipbot for Pandacoin.",
+			"This is a tipbot for ZCoin.",
 			"Made by [@DarthJahus](https://github.com/DarthJahus) and [@JustTheDoctor](https://github.com/JustTheDoctor)."
 		]
 	},
@@ -97,7 +97,7 @@
 	},
 	"user_no_address_button": {
 		"en": [
-			"My account :panda_face:"
+			"My account"
 		]
 	},
 	"user_balance": {
@@ -158,7 +158,7 @@
 		"en": [
 			"There was an error in your tip.",
 			"- Recipients should be *unique* and *properly tagged*;",
-			"- Amounts should be *numbers* (not real pandas);",
+			"- Amounts should be *numbers*;",
 			"- Provide *an amount per recipient* or *one unique* for all of them."
 		]
 	},

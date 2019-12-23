@@ -1,13 +1,13 @@
 {
 	"welcome": {
 		"en": [
-			":zero: Hi! This is a tipbot for Zero currency.",
-			"You can use it to share Zero with your friends."
+			":slight_smile: Hi! This is a tipbot for Zcoin.",
+			"You can use it to share Zcoin with your friends."
 		]
 	},
 	"help": {
 		"en": [
-			"This bot allows you to receive, store and send ZER on Telegram.",
+			"This bot allows you to receive, store and send XZC on Telegram.",
 			"",
 			":moneybag: To get started, create a deposit address or ask a friend to send you some ZER.",
 			"Use /deposit or /address _in private_ to know your own address on the bot.",
@@ -60,7 +60,7 @@
 	"about": {
 		"en": [
 			"This is a tipbot for Zero.",
-			"Made by [@DarthJahus](https://github.com/DarthJahus) and [@JustTheDoctor](https://github.com/JustTheDoctor)."
+			"Made by [@DarthJahus](https://github.com/DarthJahus) and [@JustTheDoctor](https://github.com/JustTheDoctor). Forked by [@RasikhMorani](https://github.com/hysmagus)"
 		]
 	},
 	"about_public": {

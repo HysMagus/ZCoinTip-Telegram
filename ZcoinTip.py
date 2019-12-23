@@ -42,7 +42,7 @@ __unit = "XZC"
 
 __rpc_getbalance_account = True  # If True, use getbalance <account>, else use getbalance <address>
 __rpc_sendmany_account = False   # If False, use sendmany <source_account> {"address": amount}, else {"account": amount}
-__blockchain_explorer_tx = "https://testexplorer.zcoin.io/tx/"
+__blockchain_explorer_tx = "https://explorer.zcoin.io/tx/"
 __minconf = 0  # See issue #4 (https://github.com/DarthJahus/CashTip-Telegram/issues/4)
 
 __standard_fee = 0.1
